@@ -13,7 +13,7 @@ EPSILON = 0.1    # 探索率
 ALPHA = 0.1      # 学習率
 GAMMA = 0.90
 ACTIONS = np.arange(4)  # 行動の集合
-HP = 16
+HP = 24
 
 if __name__ == '__main__':
     buttle_env = ButtleWorld(hp = HP) # バトルフィールドの初期化

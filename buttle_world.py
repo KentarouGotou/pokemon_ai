@@ -5,7 +5,7 @@ class ButtleWorld:
         # バトルフィールドの初期化
         # HPの初期化
         self.agent_init_state = hp
-        self.enemy_init_state = hp / 2
+        self.enemy_init_state = hp
         # バフの初期化
         self.agent_init_buff = False
         self.enemy_init_buff = False

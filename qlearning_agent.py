@@ -48,7 +48,8 @@ class QLearningAgent:
         else:   # greedy 行動
             agent_action = np.argmax(self.q_values[self.state])
         #敵の行動選択
-        enemy_action = np.random.randint(0, len(self.actions))
+        # enemy_action = np.random.randint(0, len(self.actions))
+        enemy_action = 2
         self.previous_action = agent_action
         return agent_action, enemy_action
 
