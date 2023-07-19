@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 from qlearning_agent import QLearningAgent
 from buttle_world import ButtleWorld
 
@@ -12,7 +13,7 @@ EPSILON = 0.1    # 探索率
 ALPHA = 0.1      # 学習率
 GAMMA = 0.90
 ACTIONS = np.arange(4)  # 行動の集合
-HP = 16
+HP = 30
 
 if __name__ == '__main__':
     buttle_env = ButtleWorld(hp = HP) # バトルフィールドの初期化
@@ -41,3 +42,10 @@ if __name__ == '__main__':
         states = buttle_env.reset_state()  # 初期化
         agent.observe(states)    # エージェントを初期位置に
         is_end_episode = False
+        
+    # 結果のプロット
+    plt.plot(np.arange(NB_EPISODE), rewards)
+    plt.xlabel("episode")
+    plt.ylabel("reward")
+    plt.savefig("result.jpg")
+    plt.show()
