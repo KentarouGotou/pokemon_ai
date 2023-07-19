@@ -5,7 +5,7 @@ class ButtleWorld:
         # バトルフィールドの初期化
         # HPの初期化
         self.agent_init_state = hp
-        self.enemy_init_state = hp
+        self.enemy_init_state = hp / 2
         # バフの初期化
         self.agent_init_buff = False
         self.enemy_init_buff = False
@@ -37,9 +37,9 @@ class ButtleWorld:
         enemy_damage = self.damage[self.actions[enemy_action]]
         agent_damage = self.damage[self.actions[agent_action]]
         if agent_buff:
-            agent_damage = agent_damage * 2
+            agent_damage = agent_damage * 20
         if enemy_buff:
-            enemy_damage = enemy_damage * 2
+            enemy_damage = enemy_damage * 20
         
         # HPの更新
         agent_hp = agent_hp - enemy_damage

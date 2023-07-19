@@ -8,12 +8,12 @@ from buttle_world import ButtleWorld
 # 報酬：勝ったら100，負けたら-100，引き分けは0, 相手よりもダメージが高いと+1, 相手よりもダメージが低いと-1
 
 # 定数
-NB_EPISODE = 100    # エピソード数
+NB_EPISODE = 1000    # エピソード数
 EPSILON = 0.1    # 探索率
 ALPHA = 0.1      # 学習率
 GAMMA = 0.90
 ACTIONS = np.arange(4)  # 行動の集合
-HP = 30
+HP = 16
 
 if __name__ == '__main__':
     buttle_env = ButtleWorld(hp = HP) # バトルフィールドの初期化
